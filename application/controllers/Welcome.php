@@ -20,6 +20,9 @@ class Welcome extends CI_Controller {
 	 */
 	public function index()
 	{
-		$this->load->view('welcome_message');
-	}
+	    $data['title'] = 'Welcome to Code Igniter';
+        $this->load->view('templates/header', $data);
+        $this->load->view('welcome_message', $data);
+        $this->load->view('templates/footer');
+    }
 }
